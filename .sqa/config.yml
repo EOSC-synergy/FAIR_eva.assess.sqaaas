@@ -1,0 +1,52 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/FAIR_eva:
+      branch: main
+      repo: https://github.com/EOSC-synergy/FAIR_eva
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: 1.4.0-alpha
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/EOSC-synergy/FAIR_eva git:
+        commands:
+        - /usr/bin/env sh .sqa/script.lumpy-pumpkin-chin.sh
+        container: qc.acc_lovely-turquoise-snail
+  QC.Doc:
+    repos:
+      github.com/EOSC-synergy/FAIR_eva find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.chummy-black-terrier.sh
+        container: qc.doc_pretty-russet-dolphin
+      github.com/EOSC-synergy/FAIR_eva markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.woolly-black-tapir.sh
+        container: qc.doc_crappy-peach-hound
+      github.com/EOSC-synergy/FAIR_eva restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.homely-periwinkle-pinscher.sh
+        container: qc.doc_jumpy-sepia-spitz
+  QC.Lic:
+    repos:
+      github.com/EOSC-synergy/FAIR_eva licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.pretty-vermilion-meerkat.sh
+        container: qc.lic_blurry-persimmon-saola
+  QC.Sec:
+    repos:
+      github.com/EOSC-synergy/FAIR_eva bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.lovely-goldenrod-swan.sh
+        container: qc.sec_stuffy-firebrick-bison
+  QC.Sty:
+    repos:
+      github.com/EOSC-synergy/FAIR_eva flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.jumpy-lime-albatross.sh
+        container: qc.sty_jumpy-cerulean-ray
+timeout: 600
