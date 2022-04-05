@@ -15,38 +15,38 @@ sqa_criteria:
     repos:
       github.com/EOSC-synergy/FAIR_eva git:
         commands:
-        - /usr/bin/env sh .sqa/script.lumpy-pumpkin-chin.sh
-        container: qc.acc_lovely-turquoise-snail
+        - /usr/bin/env sh .sqa/script.snappy-copper-gopher.sh
+        container: qc.acc_goopy-seashell-spider
   QC.Doc:
     repos:
       github.com/EOSC-synergy/FAIR_eva find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.chummy-black-terrier.sh
-        container: qc.doc_pretty-russet-dolphin
+        - /usr/bin/env sh .sqa/script.craggy-white-kingfisher.sh
+        container: qc.doc_tacky-bronze-antelope
       github.com/EOSC-synergy/FAIR_eva markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.woolly-black-tapir.sh
-        container: qc.doc_crappy-peach-hound
+        - /usr/bin/env sh .sqa/script.shaggy-dandelion-mayfly.sh
+        container: qc.doc_queasy-mauve-tetra
       github.com/EOSC-synergy/FAIR_eva restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.homely-periwinkle-pinscher.sh
-        container: qc.doc_jumpy-sepia-spitz
+        - /usr/bin/env sh .sqa/script.wiggy-viridian-buzzard.sh
+        container: qc.doc_geeky-peach-starfish
   QC.Lic:
     repos:
       github.com/EOSC-synergy/FAIR_eva licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.pretty-vermilion-meerkat.sh
-        container: qc.lic_blurry-persimmon-saola
+        - /usr/bin/env sh .sqa/script.boozy-ivory-dormouse.sh
+        container: qc.lic_sloppy-thistle-reindeer
   QC.Sec:
     repos:
       github.com/EOSC-synergy/FAIR_eva bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.lovely-goldenrod-swan.sh
-        container: qc.sec_stuffy-firebrick-bison
+        - /usr/bin/env sh .sqa/script.pokey-seashell-argentino.sh
+        container: qc.sec_snazzy-firebrick-meerkat
   QC.Sty:
     repos:
       github.com/EOSC-synergy/FAIR_eva flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.jumpy-lime-albatross.sh
-        container: qc.sty_jumpy-cerulean-ray
+        - /usr/bin/env sh .sqa/script.crappy-myrtle-anteater.sh
+        container: qc.sty_beady-sangria-caterpillar
 timeout: 600
