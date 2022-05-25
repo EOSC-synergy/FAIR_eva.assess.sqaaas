@@ -5,7 +5,7 @@ config:
       branch: main
       repo: https://github.com/EOSC-synergy/FAIR_eva
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: 1.4.0-alpha
+      branch: 1.6.0-no_svcqa
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
 environment:
   JPL_DOCKERFORCEBUILD: enabled
@@ -15,38 +15,44 @@ sqa_criteria:
     repos:
       github.com/EOSC-synergy/FAIR_eva git:
         commands:
-        - /usr/bin/env sh .sqa/script.snappy-copper-gopher.sh
-        container: qc.acc_goopy-seashell-spider
+        - /usr/bin/env sh .sqa/script.foggy-apricot-jaguar.sh
+        container: qc.acc_queasy-red-bandicoot
   QC.Doc:
     repos:
       github.com/EOSC-synergy/FAIR_eva find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.craggy-white-kingfisher.sh
-        container: qc.doc_tacky-bronze-antelope
+        - /usr/bin/env sh .sqa/script.chummy-green-labradoodle.sh
+        container: qc.doc_gloppy-periwinkle-quail
       github.com/EOSC-synergy/FAIR_eva markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.shaggy-dandelion-mayfly.sh
-        container: qc.doc_queasy-mauve-tetra
+        - /usr/bin/env sh .sqa/script.sleepy-brown-barb.sh
+        container: qc.doc_snoopy-purple-mole
       github.com/EOSC-synergy/FAIR_eva restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.wiggy-viridian-buzzard.sh
-        container: qc.doc_geeky-peach-starfish
+        - /usr/bin/env sh .sqa/script.jumpy-ivory-pinscher.sh
+        container: qc.doc_pasty-taupe-caracal
   QC.Lic:
     repos:
       github.com/EOSC-synergy/FAIR_eva licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.boozy-ivory-dormouse.sh
-        container: qc.lic_sloppy-thistle-reindeer
+        - /usr/bin/env sh .sqa/script.stuffy-bistre-dachshund.sh
+        container: qc.lic_sleazy-olivine-llama
   QC.Sec:
     repos:
       github.com/EOSC-synergy/FAIR_eva bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.pokey-seashell-argentino.sh
-        container: qc.sec_snazzy-firebrick-meerkat
+        - /usr/bin/env sh .sqa/script.wiggy-cream-oriole.sh
+        container: qc.sec_surly-vermilion-zonkey
   QC.Sty:
     repos:
       github.com/EOSC-synergy/FAIR_eva flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-myrtle-anteater.sh
-        container: qc.sty_beady-sangria-caterpillar
+        - /usr/bin/env sh .sqa/script.shaky-cerulean-cuscus.sh
+        container: qc.sty_beady-ecru-seahorse
+  QC.Ver:
+    repos:
+      github.com/EOSC-synergy/FAIR_eva get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.breezy-flax-warthog.sh
+        container: qc.ver_gloppy-platinum-koala
 timeout: 600
