@@ -5,7 +5,7 @@ config:
       branch: main
       repo: https://github.com/EOSC-synergy/FAIR_eva
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.7
+      branch: release/1.7.8
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
 environment:
   JPL_DOCKERFORCEBUILD: enabled
@@ -15,58 +15,58 @@ sqa_criteria:
     repos:
       github.com/EOSC-synergy/FAIR_eva git:
         commands:
-        - /usr/bin/env sh .sqa/script.snappy-flax-lemur.sh
-        container: qc.acc_breezy-carmine-lionfish
+        - /usr/bin/env sh .sqa/script.sleazy-cinnamon-caiman.sh
+        container: qc.acc_beady-purple-nightingale
   QC.Doc:
     repos:
       github.com/EOSC-synergy/FAIR_eva find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sunny-platinum-mongoose.sh
-        container: qc.doc_sickly-cerise-harrier
+        - /usr/bin/env sh .sqa/script.surly-myrtle-kangaroo.sh
+        container: qc.doc_homely-green-seal
       github.com/EOSC-synergy/FAIR_eva git:
         commands:
-        - /usr/bin/env sh .sqa/script.gloppy-ochre-dolphin.sh
-        container: qc.doc_muzzy-chestnut-mau
+        - /usr/bin/env sh .sqa/script.squirrely-amber-hare.sh
+        container: qc.doc_cheeky-gold-vulture
       github.com/EOSC-synergy/FAIR_eva markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.freaky-zucchini-giraffe.sh
-        container: qc.doc_randy-goldenrod-beetle
+        - /usr/bin/env sh .sqa/script.stuffy-jade-mammoth.sh
+        container: qc.doc_lanky-mustard-burmese
       github.com/EOSC-synergy/FAIR_eva restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.nippy-malachite-labradoodle.sh
-        container: qc.doc_muzzy-vermilion-quetzal
+        - /usr/bin/env sh .sqa/script.lousy-champagne-bison.sh
+        container: qc.doc_beady-cream-camel
   QC.Lic:
     repos:
       github.com/EOSC-synergy/FAIR_eva licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.cranky-green-tiger.sh
-        container: qc.lic_muggy-azure-shrew
+        - /usr/bin/env sh .sqa/script.scanty-turquoise-elephant.sh
+        container: qc.lic_bluesy-alizarin-bullfrog
   QC.Met:
     repos:
       github.com/EOSC-synergy/FAIR_eva cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.skanky-wheat-binturong.sh
-        container: qc.met_woozy-burgundy-raccoon
+        - /usr/bin/env sh .sqa/script.shabby-magnolia-lizard.sh
+        container: qc.met_zippy-salmon-tarantula
   QC.Sec:
     repos:
       github.com/EOSC-synergy/FAIR_eva bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.seedy-champagne-spaniel.sh
-        container: qc.sec_surly-dandelion-turtle
+        - /usr/bin/env sh .sqa/script.randy-pink-worm.sh
+        container: qc.sec_freaky-turquoise-caterpillar
   QC.Sty:
     repos:
       github.com/EOSC-synergy/FAIR_eva flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.slimy-rose-sheepdog.sh
-        container: qc.sty_hasty-bistre-clam
+        - /usr/bin/env sh .sqa/script.wimpy-khaki-binturong.sh
+        container: qc.sty_woolly-harlequin-meerkat
       github.com/EOSC-synergy/FAIR_eva hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.whiny-saffron-swan.sh
-        container: qc.sty_trippy-champagne-bear
+        - /usr/bin/env sh .sqa/script.sleazy-celadon-bullfrog.sh
+        container: qc.sty_muzzy-goldenrod-quetzal
   QC.Ver:
     repos:
       github.com/EOSC-synergy/FAIR_eva get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.muzzy-lavender-seahorse.sh
-        container: qc.ver_flimsy-bistre-tiger
-timeout: 1800
+        - /usr/bin/env sh .sqa/script.scummy-sapphire-scorpion.sh
+        container: qc.ver_randy-gamboge-rattlesnake
+timeout: 5400
