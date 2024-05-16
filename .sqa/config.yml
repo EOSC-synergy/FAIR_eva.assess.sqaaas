@@ -5,7 +5,7 @@ config:
       branch: main
       repo: https://github.com/EOSC-synergy/FAIR_eva
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.8
+      branch: release/2.0.1
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
 environment:
   JPL_DOCKERFORCEBUILD: enabled
@@ -15,58 +15,68 @@ sqa_criteria:
     repos:
       github.com/EOSC-synergy/FAIR_eva git:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-cinnamon-caiman.sh
-        container: qc.acc_beady-purple-nightingale
+        - /usr/bin/env sh .sqa/script.flimsy-ecru-guppy.sh
+        container: qc.acc_flabby-indigo-meerkat
   QC.Doc:
     repos:
       github.com/EOSC-synergy/FAIR_eva find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.surly-myrtle-kangaroo.sh
-        container: qc.doc_homely-green-seal
+        - /usr/bin/env sh .sqa/script.wimpy-taupe-dugong.sh
+        container: qc.doc_shabby-cerulean-fossa
       github.com/EOSC-synergy/FAIR_eva git:
         commands:
-        - /usr/bin/env sh .sqa/script.squirrely-amber-hare.sh
-        container: qc.doc_cheeky-gold-vulture
+        - /usr/bin/env sh .sqa/script.pretty-cinnamon-burmese.sh
+        container: qc.doc_nerdy-cyan-blue
       github.com/EOSC-synergy/FAIR_eva markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.stuffy-jade-mammoth.sh
-        container: qc.doc_lanky-mustard-burmese
+        - /usr/bin/env sh .sqa/script.cloudy-azure-seal.sh
+        container: qc.doc_scanty-pink-robin
       github.com/EOSC-synergy/FAIR_eva restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.lousy-champagne-bison.sh
-        container: qc.doc_beady-cream-camel
+        - /usr/bin/env sh .sqa/script.sickly-denim-dolphin.sh
+        container: qc.doc_tasty-cobalt-chipmunk
   QC.Lic:
     repos:
       github.com/EOSC-synergy/FAIR_eva licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.scanty-turquoise-elephant.sh
-        container: qc.lic_bluesy-alizarin-bullfrog
+        - /usr/bin/env sh .sqa/script.surly-firebrick-dodo.sh
+        container: qc.lic_sloppy-aqua-terrier
   QC.Met:
     repos:
       github.com/EOSC-synergy/FAIR_eva cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.shabby-magnolia-lizard.sh
-        container: qc.met_zippy-salmon-tarantula
+        - /usr/bin/env sh .sqa/script.ugly-flax-chin.sh
+        container: qc.met_paltry-brown-dragonfly
   QC.Sec:
     repos:
       github.com/EOSC-synergy/FAIR_eva bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.randy-pink-worm.sh
-        container: qc.sec_freaky-turquoise-caterpillar
+        - /usr/bin/env sh .sqa/script.muggy-copper-loon.sh
+        container: qc.sec_breezy-olive-toad
   QC.Sty:
     repos:
       github.com/EOSC-synergy/FAIR_eva flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.wimpy-khaki-binturong.sh
-        container: qc.sty_woolly-harlequin-meerkat
+        - /usr/bin/env sh .sqa/script.whiny-orange-quoll.sh
+        container: qc.sty_hazy-black-antelope
       github.com/EOSC-synergy/FAIR_eva hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-celadon-bullfrog.sh
-        container: qc.sty_muzzy-goldenrod-quetzal
+        - /usr/bin/env sh .sqa/script.geeky-ivory-beetle.sh
+        container: qc.sty_shaggy-khaki-dhole
+      github.com/EOSC-synergy/FAIR_eva jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.smelly-apricot-koala.sh
+        container: qc.sty_snoopy-gold-toucan
+  QC.Uni:
+    repos:
+      github.com/EOSC-synergy/FAIR_eva pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.lovely-sepia-mastiff.sh
+        container: qc.uni_foggy-saffron-setter
   QC.Ver:
     repos:
       github.com/EOSC-synergy/FAIR_eva get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.scummy-sapphire-scorpion.sh
-        container: qc.ver_randy-gamboge-rattlesnake
+        - /usr/bin/env sh .sqa/script.flabby-ruby-starfish.sh
+        container: qc.ver_squeaky-turquoise-bandicoot
 timeout: 5400
