@@ -5,78 +5,16 @@ config:
       branch: main
       repo: https://github.com/EOSC-synergy/FAIR_eva
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/2.0.1
+      branch: release/2.2.1
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
-  QC.Acc:
-    repos:
-      github.com/EOSC-synergy/FAIR_eva git:
-        commands:
-        - /usr/bin/env sh .sqa/script.tasty-tomato-discus.sh
-        container: qc.acc_jumpy-goldenrod-hyrax
-  QC.Doc:
-    repos:
-      github.com/EOSC-synergy/FAIR_eva find_doc_files.py:
-        commands:
-        - /usr/bin/env sh .sqa/script.lousy-heliotrope-civet.sh
-        container: qc.doc_cheeky-gamboge-zorse
-      github.com/EOSC-synergy/FAIR_eva git:
-        commands:
-        - /usr/bin/env sh .sqa/script.homey-red-earwig.sh
-        container: qc.doc_shaggy-lemon-retriever
-      github.com/EOSC-synergy/FAIR_eva markdownlint:
-        commands:
-        - /usr/bin/env sh .sqa/script.hasty-plum-armadillo.sh
-        container: qc.doc_silly-black-moth
-      github.com/EOSC-synergy/FAIR_eva restructuredtext-lint:
-        commands:
-        - /usr/bin/env sh .sqa/script.geeky-firebrick-shrew.sh
-        container: qc.doc_sloppy-champagne-beetle
-  QC.Lic:
-    repos:
-      github.com/EOSC-synergy/FAIR_eva licensee:
-        commands:
-        - /usr/bin/env sh .sqa/script.crappy-vermilion-guppy.sh
-        container: qc.lic_hasty-chestnut-sponge
-  QC.Met:
-    repos:
-      github.com/EOSC-synergy/FAIR_eva cff-converter-python:
-        commands:
-        - /usr/bin/env sh .sqa/script.squirrely-magnolia-collie.sh
-        container: qc.met_gamy-cerulean-retriever
-  QC.Sec:
-    repos:
-      github.com/EOSC-synergy/FAIR_eva bandit:
-        commands:
-        - /usr/bin/env sh .sqa/script.gloppy-rose-caterpillar.sh
-        container: qc.sec_tasty-salmon-dalmatian
   QC.Sty:
     repos:
-      github.com/EOSC-synergy/FAIR_eva flake8:
+      github.com/EOSC-synergy/FAIR_eva PyOphidia:
         commands:
-        - /usr/bin/env sh .sqa/script.wheezy-flax-quoll.sh
-        container: qc.sty_cranky-persimmon-paradise
-      github.com/EOSC-synergy/FAIR_eva hadolint:
-        commands:
-        - /usr/bin/env sh .sqa/script.whiny-taupe-quail.sh
-        container: qc.sty_nippy-heliotrope-barb
-      github.com/EOSC-synergy/FAIR_eva jsonlint:
-        commands:
-        - /usr/bin/env sh .sqa/script.flaky-celadon-hyrax.sh
-        container: qc.sty_squirrely-ecru-argentino
-  QC.Uni:
-    repos:
-      github.com/EOSC-synergy/FAIR_eva pytest:
-        commands:
-        - /usr/bin/env sh .sqa/script.foggy-razzmatazz-audemer.sh
-        container: qc.uni_sickly-olive-dragon
-  QC.Ver:
-    repos:
-      github.com/EOSC-synergy/FAIR_eva get_git_tags.py:
-        commands:
-        - /usr/bin/env sh .sqa/script.queasy-corn-dolphin.sh
-        container: qc.ver_lanky-harlequin-slug
+        - /usr/bin/env sh .sqa/script.grumpy-thistle-peccary.sh
+        container: qc.sty_wimpy-cardinal-labradoodle
 timeout: 5400
