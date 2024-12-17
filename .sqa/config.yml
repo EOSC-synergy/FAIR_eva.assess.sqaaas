@@ -5,16 +5,70 @@ config:
       branch: main
       repo: https://github.com/EOSC-synergy/FAIR_eva
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/2.2.1
+      branch: release/2.3.0
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/EOSC-synergy/FAIR_eva git:
+        commands:
+        - /usr/bin/env sh .sqa/script.snippy-celadon-neanderthal.sh
+        container: qc.acc_hilly-xanthic-uakari
+  QC.Doc:
+    repos:
+      github.com/EOSC-synergy/FAIR_eva find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.seedy-taupe-retriever.sh
+        container: qc.doc_geeky-puce-spaniel
+      github.com/EOSC-synergy/FAIR_eva git:
+        commands:
+        - /usr/bin/env sh .sqa/script.snoopy-sepia-gar.sh
+        container: qc.doc_ready-ruby-caterpillar
+      github.com/EOSC-synergy/FAIR_eva markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.ugly-pear-weasel.sh
+        container: qc.doc_stuffy-lemon-affenpinscher
+      github.com/EOSC-synergy/FAIR_eva restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.homely-cream-cat.sh
+        container: qc.doc_scanty-rust-mouse
+  QC.Lic:
+    repos:
+      github.com/EOSC-synergy/FAIR_eva licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.sickly-gold-mist.sh
+        container: qc.lic_silly-orchid-mastiff
+  QC.Met:
+    repos:
+      github.com/EOSC-synergy/FAIR_eva cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.bluesy-gamboge-dugong.sh
+        container: qc.met_breezy-celadon-capybara
+  QC.Sec:
+    repos:
+      github.com/EOSC-synergy/FAIR_eva bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.tacky-firebrick-newt.sh
+        container: qc.sec_snappy-sepia-malamute
   QC.Sty:
     repos:
-      github.com/EOSC-synergy/FAIR_eva PyOphidia:
+      github.com/EOSC-synergy/FAIR_eva flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.grumpy-thistle-peccary.sh
-        container: qc.sty_wimpy-cardinal-labradoodle
+        - /usr/bin/env sh .sqa/script.sleazy-dandelion-mouse.sh
+        container: qc.sty_scummy-gold-audemer
+  QC.Uni:
+    repos:
+      github.com/EOSC-synergy/FAIR_eva pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.craggy-myrtle-chihuahua.sh
+        container: qc.uni_droopy-bistre-tiger
+  QC.Ver:
+    repos:
+      github.com/EOSC-synergy/FAIR_eva get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.lanky-wisteria-zorse.sh
+        container: qc.ver_skimpy-firebrick-mandrill
 timeout: 5400

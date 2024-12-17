@@ -5,5 +5,5 @@
 
 (
 cd github.com/EOSC-synergy/FAIR_eva &&
-    PyOphidia --path .
+    licensee detect . --confidence 60 --json 
 )
