@@ -5,7 +5,7 @@ config:
       branch: main
       repo: https://github.com/EOSC-synergy/FAIR_eva
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/2.3.0
+      branch: main
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
 environment:
   JPL_DOCKERFORCEBUILD: enabled
@@ -15,60 +15,68 @@ sqa_criteria:
     repos:
       github.com/EOSC-synergy/FAIR_eva git:
         commands:
-        - /usr/bin/env sh .sqa/script.pasty-apricot-zebra.sh
-        container: qc.acc_hazy-charcoal-bison
+        - /usr/bin/env sh .sqa/script.paltry-cinnamon-mastiff.sh
+        container: qc.acc_gummy-white-molly
   QC.Doc:
     repos:
       github.com/EOSC-synergy/FAIR_eva find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.whiny-cinnabar-orangutan.sh
-        container: qc.doc_stealthy-magnolia-giraffe
+        - /usr/bin/env sh .sqa/script.beady-salmon-peccary.sh
+        container: qc.doc_clammy-puce-tapir
       github.com/EOSC-synergy/FAIR_eva git:
         commands:
-        - /usr/bin/env sh .sqa/script.pasty-bronze-setter.sh
-        container: qc.doc_skanky-turquoise-discus
+        - /usr/bin/env sh .sqa/script.snappy-sangria-bloodhound.sh
+        container: qc.doc_fuzzy-violet-wildebeest
       github.com/EOSC-synergy/FAIR_eva markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.hasty-khaki-chameleon.sh
-        container: qc.doc_chewy-pear-tarantula
+        - /usr/bin/env sh .sqa/script.wheezy-smalt-setter.sh
+        container: qc.doc_woolly-auburn-argentino
       github.com/EOSC-synergy/FAIR_eva restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.flaky-saffron-frigatebird.sh
-        container: qc.doc_beady-olivine-avocet
+        - /usr/bin/env sh .sqa/script.chummy-turquoise-wolf.sh
+        container: qc.doc_hasty-platinum-spider
   QC.Lic:
     repos:
       github.com/EOSC-synergy/FAIR_eva licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.beady-gold-fousek.sh
-        container: qc.lic_cloudy-chartreuse-giraffe
+        - /usr/bin/env sh .sqa/script.dorky-magenta-anteater.sh
+        container: qc.lic_silly-gold-sponge
   QC.Met:
     repos:
       github.com/EOSC-synergy/FAIR_eva cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.nippy-malachite-duck.sh
-        container: qc.met_greasy-linen-wolfhound
+        - /usr/bin/env sh .sqa/script.breezy-alizarin-chihuahua.sh
+        container: qc.met_jumpy-scarlet-barracuda
   QC.Sec:
     repos:
       github.com/EOSC-synergy/FAIR_eva bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.muzzy-olive-caracal.sh
-        container: qc.sec_hazy-ochre-badger
+        - /usr/bin/env sh .sqa/script.bumpy-chocolate-ladybird.sh
+        container: qc.sec_smelly-saffron-birman
   QC.Sty:
     repos:
       github.com/EOSC-synergy/FAIR_eva flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.squirrely-linen-caiman.sh
-        container: qc.sty_whiny-peach-bordeaux
+        - /usr/bin/env sh .sqa/script.blurry-gold-snake.sh
+        container: qc.sty_boozy-sangria-bee
+      github.com/EOSC-synergy/FAIR_eva hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.hilly-amber-husky.sh
+        container: qc.sty_shabby-vermilion-lynx
+      github.com/EOSC-synergy/FAIR_eva jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.woolly-white-hamster.sh
+        container: qc.sty_fuzzy-cyan-akita
   QC.Uni:
     repos:
       github.com/EOSC-synergy/FAIR_eva pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.snappy-bistre-bonobo.sh
-        container: qc.uni_sloppy-olive-zorse
+        - /usr/bin/env sh .sqa/script.freaky-apricot-uakari.sh
+        container: qc.uni_stealthy-ecru-chimpanzee
   QC.Ver:
     repos:
       github.com/EOSC-synergy/FAIR_eva get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.boozy-tomato-termite.sh
-        container: qc.ver_craggy-amber-newfoundland
+        - /usr/bin/env sh .sqa/script.beady-salmon-impala.sh
+        container: qc.ver_scanty-maroon-uguisu
 timeout: 5400
