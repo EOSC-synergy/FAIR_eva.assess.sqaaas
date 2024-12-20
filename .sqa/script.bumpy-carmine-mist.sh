@@ -5,5 +5,5 @@
 
 (
 cd github.com/EOSC-synergy/FAIR_eva &&
-    flake8 .
+    flake8 . --exclude
 )
