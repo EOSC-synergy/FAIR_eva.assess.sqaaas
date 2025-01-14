@@ -5,7 +5,7 @@ config:
       branch: main
       repo: https://github.com/EOSC-synergy/FAIR_eva
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/2.3.0
+      branch: main
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
 environment:
   JPL_DOCKERFORCEBUILD: enabled
@@ -15,60 +15,68 @@ sqa_criteria:
     repos:
       github.com/EOSC-synergy/FAIR_eva git:
         commands:
-        - /usr/bin/env sh .sqa/script.lanky-asparagus-dragon.sh
-        container: qc.acc_surly-vermilion-goose
+        - /usr/bin/env sh .sqa/script.hasty-rust-emu.sh
+        container: qc.acc_flaky-purple-zorse
   QC.Doc:
     repos:
       github.com/EOSC-synergy/FAIR_eva find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.homey-charcoal-badger.sh
-        container: qc.doc_pasty-puce-schnauzer
+        - /usr/bin/env sh .sqa/script.droopy-lime-newfoundland.sh
+        container: qc.doc_breezy-lime-hornet
       github.com/EOSC-synergy/FAIR_eva git:
         commands:
-        - /usr/bin/env sh .sqa/script.silly-asparagus-wolverine.sh
-        container: qc.doc_muggy-heliotrope-birman
+        - /usr/bin/env sh .sqa/script.muggy-orange-drever.sh
+        container: qc.doc_chummy-scarlet-rattlesnake
       github.com/EOSC-synergy/FAIR_eva markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.shabby-red-reindeer.sh
-        container: qc.doc_pokey-puce-frigatebird
+        - /usr/bin/env sh .sqa/script.blurry-cinnamon-wolfhound.sh
+        container: qc.doc_lovely-amber-horse
       github.com/EOSC-synergy/FAIR_eva restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.tasty-plum-bonobo.sh
-        container: qc.doc_snoopy-lavender-jellyfish
+        - /usr/bin/env sh .sqa/script.chummy-cyan-coyote.sh
+        container: qc.doc_pasty-saffron-moorhen
   QC.Lic:
     repos:
       github.com/EOSC-synergy/FAIR_eva licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.blurry-champagne-gecko.sh
-        container: qc.lic_pretty-firebrick-horse
+        - /usr/bin/env sh .sqa/script.lousy-pumpkin-neanderthal.sh
+        container: qc.lic_cloudy-orange-urchin
   QC.Met:
     repos:
       github.com/EOSC-synergy/FAIR_eva cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.scaly-zucchini-saola.sh
-        container: qc.met_bumpy-sapphire-squirrel
+        - /usr/bin/env sh .sqa/script.shaggy-maroon-buzzard.sh
+        container: qc.met_trippy-plum-mongrel
   QC.Sec:
     repos:
       github.com/EOSC-synergy/FAIR_eva bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.woolly-coral-bobcat.sh
-        container: qc.sec_flaky-seashell-frog
+        - /usr/bin/env sh .sqa/script.dorky-champagne-mammoth.sh
+        container: qc.sec_goopy-bistre-grouse
   QC.Sty:
     repos:
       github.com/EOSC-synergy/FAIR_eva flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.bumpy-carmine-mist.sh
-        container: qc.sty_skanky-ecru-gibbon
+        - /usr/bin/env sh .sqa/script.trippy-goldenrod-ferret.sh
+        container: qc.sty_queasy-tangerine-squirt
+      github.com/EOSC-synergy/FAIR_eva hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.skimpy-harlequin-barracuda.sh
+        container: qc.sty_geeky-olivine-salamander
+      github.com/EOSC-synergy/FAIR_eva jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.randy-smalt-hedgehog.sh
+        container: qc.sty_pasty-taupe-argentino
   QC.Uni:
     repos:
       github.com/EOSC-synergy/FAIR_eva pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.tacky-puce-uguisu.sh
-        container: qc.uni_woozy-cinnamon-rottweiler
+        - /usr/bin/env sh .sqa/script.surly-firebrick-zonkey.sh
+        container: qc.uni_wiggy-sepia-bison
   QC.Ver:
     repos:
       github.com/EOSC-synergy/FAIR_eva get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.paltry-zucchini-jellyfish.sh
-        container: qc.ver_crabby-cinnabar-bird
+        - /usr/bin/env sh .sqa/script.woolly-champagne-angora.sh
+        container: qc.ver_sickly-jade-akita
 timeout: 5400
