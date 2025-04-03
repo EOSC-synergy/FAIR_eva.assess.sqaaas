@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/FAIR_eva:
-      branch: main
+      branch: testactions
       repo: https://github.com/EOSC-synergy/FAIR_eva
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: main
@@ -15,68 +15,68 @@ sqa_criteria:
     repos:
       github.com/EOSC-synergy/FAIR_eva git:
         commands:
-        - /usr/bin/env sh .sqa/script.snappy-harlequin-okapi.sh
-        container: qc.acc_grumpy-coral-butterfly
+        - /usr/bin/env sh .sqa/script.skinny-ecru-angelfish.sh
+        container: qc.acc_hilly-scarlet-tarsier
   QC.Doc:
     repos:
       github.com/EOSC-synergy/FAIR_eva find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.woolly-bronze-cassowary.sh
-        container: qc.doc_shaggy-magenta-dragonfly
+        - /usr/bin/env sh .sqa/script.jumpy-aquamarine-mule.sh
+        container: qc.doc_sleepy-denim-lobster
       github.com/EOSC-synergy/FAIR_eva git:
         commands:
-        - /usr/bin/env sh .sqa/script.ugly-eggplant-armadillo.sh
-        container: qc.doc_squeaky-rose-robin
+        - /usr/bin/env sh .sqa/script.squeaky-maroon-buzzard.sh
+        container: qc.doc_squeaky-periwinkle-bandicoot
       github.com/EOSC-synergy/FAIR_eva markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.stealthy-ultramarine-magpie.sh
-        container: qc.doc_hasty-magenta-pig
+        - /usr/bin/env sh .sqa/script.scanty-harlequin-butterfly.sh
+        container: qc.doc_cloudy-turquoise-orangutan
       github.com/EOSC-synergy/FAIR_eva restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.leaky-pumpkin-labradoodle.sh
-        container: qc.doc_messy-bronze-grouse
+        - /usr/bin/env sh .sqa/script.gloppy-turquoise-moorhen.sh
+        container: qc.doc_pokey-pink-dragonfly
   QC.Lic:
     repos:
       github.com/EOSC-synergy/FAIR_eva licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-eggplant-magpie.sh
-        container: qc.lic_zippy-cobalt-robin
+        - /usr/bin/env sh .sqa/script.muzzy-coral-cassowary.sh
+        container: qc.lic_chewy-ivory-jackal
   QC.Met:
     repos:
       github.com/EOSC-synergy/FAIR_eva cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.frumpy-fuchsia-argentino.sh
-        container: qc.met_messy-crimson-meerkat
+        - /usr/bin/env sh .sqa/script.scanty-harlequin-crab.sh
+        container: qc.met_stinky-cinnamon-retriever
   QC.Sec:
     repos:
       github.com/EOSC-synergy/FAIR_eva bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.freaky-green-dhole.sh
-        container: qc.sec_chewy-green-angora
+        - /usr/bin/env sh .sqa/script.scummy-lemon-fly.sh
+        container: qc.sec_squirrely-orange-stoat
   QC.Sty:
     repos:
       github.com/EOSC-synergy/FAIR_eva flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.tasty-saffron-pig.sh
-        container: qc.sty_boozy-sepia-cat
+        - /usr/bin/env sh .sqa/script.smelly-brown-dachsbracke.sh
+        container: qc.sty_pasty-bistre-budgerigar
       github.com/EOSC-synergy/FAIR_eva hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.shabby-sepia-binturong.sh
-        container: qc.sty_pretty-silver-eel
+        - /usr/bin/env sh .sqa/script.baggy-wheat-greyhound.sh
+        container: qc.sty_sloppy-aquamarine-zebu
       github.com/EOSC-synergy/FAIR_eva jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.craggy-wisteria-zonkey.sh
-        container: qc.sty_lanky-indigo-cheetah
+        - /usr/bin/env sh .sqa/script.slimy-cinnabar-wasp.sh
+        container: qc.sty_squirrely-amber-swan
   QC.Uni:
     repos:
       github.com/EOSC-synergy/FAIR_eva pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.frumpy-platinum-rabbit.sh
-        container: qc.uni_tacky-corn-dane
+        - /usr/bin/env sh .sqa/script.crappy-silver-bison.sh
+        container: qc.uni_gloppy-dandelion-rottweiler
   QC.Ver:
     repos:
       github.com/EOSC-synergy/FAIR_eva get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.snoopy-amaranth-cuscus.sh
-        container: qc.ver_crabby-chocolate-bordeaux
+        - /usr/bin/env sh .sqa/script.chewy-malachite-llama.sh
+        container: qc.ver_freaky-cinnamon-cuttlefish
 timeout: 5400
